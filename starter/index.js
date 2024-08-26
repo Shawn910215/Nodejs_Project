@@ -15,4 +15,4 @@ const readAsync = fs.readFile("./txt/input.txt", "utf-8", (err, data1) => {
 });
 console.log("will read file");
 
-//Write data Async
+//Write data Async jjj

@@ -21,20 +21,19 @@ const url = require("url");
 /////Server
 
 const server = http.createServer((req, res) => {
-  const pathName = req.url;
-  // console.log(pathName);
-  if (pathName === "/" || pathName === "/overview") {
-    res.end("This is OVERVIEW");
-  } else if (pathName === "/product") {
-    res.end("This is P ODUCT");
+  const url = req.url;
+  if (url === "/" || url === "/Overview") {
+    res.end("This is overview");
+  } else if (url === "/product") {
+    res.end("This is product");
   } else {
     res.writeHead(404, {
       "Content-type": "text/html",
     });
-    res.end("<h1>Page not found!</h1>");
+    res.end("<h1>Wrong page!<h1>");
   }
 });
 
 server.listen(8000, "127.0.0.1", () => {
-  console.log("Listening to port 8000");
+  console.log("Listening to port 8000!");
 });
